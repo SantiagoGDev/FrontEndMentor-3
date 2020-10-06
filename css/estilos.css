@@ -1,5 +1,46 @@
+:root {
+  --Soft_Blue: hsl(231, 69%, 60%);
+  --Soft_Red: hsl(0, 94%, 66%);
+  --Grayish_Blue: hsl(229, 8%, 60%);
+  --Very_Dark_Blue: hsl(229, 31%, 21%);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+}
+.hero .main-menu__link {
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: normal;
+  transition: all ease 1s;
+}
+.hero .main-menu__link:hover {
+  color: var(--Soft_Red);
+}
+.hero .main-menu__btn {
+  border: 2px solid var(--Soft_Red);
+  border-radius: 7px;
+  background: var(--Soft_Red);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all ease 1s;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.hero .main-menu__btn:hover {
+  background: none;
+  color: var(--Soft_Red);
+}
+
 body {
-  background: red;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
 }
 
 /*# sourceMappingURL=estilos.css.map */

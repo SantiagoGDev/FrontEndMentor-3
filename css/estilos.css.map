@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/estilos.scss"],"names":[],"mappings":"AAAA;EACC","file":"estilos.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/_colors.scss","../sass/_header.scss","../sass/_mixins.scss","../sass/estilos.scss"],"names":[],"mappings":"AAAA;EACC;EACA;EACA;EACA;;;ACJD;EACC;EACA;EACA;EAEA;;AAEA;EACC;EACA;EACA;EACA;EACA;EACA;;AAEA;EACC;;AAGF;EClBA;EACA;EACA,YDiBkB;EChBlB;EACA;EACA,ODckC;ECblC;EACA;EDaC;;ACXD;EACC;EACA,ODQiB;;;AEhBnB;EACC;EACA","file":"estilos.css"}
