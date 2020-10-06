@@ -3,11 +3,25 @@
   --Soft_Red: hsl(0, 94%, 66%);
   --Grayish_Blue: hsl(229, 8%, 60%);
   --Very_Dark_Blue: hsl(229, 31%, 21%);
+  --titles:6vmin;
+  --texto:20px;
+  --columns: 1fr 1fr;
+}
+@media screen and (max-width: 1130px) {
+  :root {
+    --titles:40px;
+  }
+}
+@media screen and (max-width: 870px) {
+  :root {
+    --titles:7vmin;
+    --columns: 1fr;
+  }
 }
 
 .hero {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 80px;
 }
@@ -38,9 +52,69 @@
   color: var(--Soft_Red);
 }
 
+.welcome {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: var(--columns);
+  grid-auto-rows: minmax(350px, 1fr);
+  align-items: center;
+}
+.welcome .welcome__title {
+  font-size: var(--titles);
+  color: var(--Very_Dark_Blue);
+}
+.welcome .welcome__parrafo {
+  line-height: 30px;
+  color: var(--Grayish_Blue);
+  font-size: 18px;
+}
+.welcome .welcome__btn-chrome {
+  border: 2px solid var(--Soft_Blue);
+  border-radius: 7px;
+  background: var(--Soft_Blue);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all ease 1s;
+  cursor: pointer;
+  text-transform: none;
+}
+.welcome .welcome__btn-chrome:hover {
+  background: none;
+  color: var(--Soft_Blue);
+}
+.welcome .welcome__btn-firefox {
+  border: 2px solid var(--Grayish_Blue);
+  border-radius: 7px;
+  background: var(--Grayish_Blue);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: var(--Very_Dark_Blue);
+  transition: all ease 1s;
+  cursor: pointer;
+  text-transform: none;
+}
+.welcome .welcome__btn-firefox:hover {
+  background: none;
+  color: var(--Grayish_Blue);
+}
+.welcome .welocme__img {
+  width: 100%;
+}
+@media screen and (max-width: 930px) {
+  .welcome {
+    margin-top: 0;
+  }
+}
+
 body {
   font-size: 16px;
   font-family: "Rubik", sans-serif;
+}
+
+.wrapper {
+  width: 90%;
+  margin: auto;
 }
 
 /*# sourceMappingURL=estilos.css.map */
