@@ -4,7 +4,7 @@
   --Grayish_Blue: hsl(229, 8%, 60%);
   --Very_Dark_Blue: hsl(229, 31%, 21%);
   --titles:6vmin;
-  --texto:20px;
+  --texto:22px;
   --columns: 1fr 1fr;
 }
 @media screen and (max-width: 1130px) {
@@ -40,7 +40,7 @@
   border: 2px solid var(--Soft_Red);
   border-radius: 7px;
   background: var(--Soft_Red);
-  padding: 10px 20px;
+  padding: 12px 20px;
   text-transform: uppercase;
   color: #fff;
   transition: all ease 1s;
@@ -72,7 +72,7 @@
   border: 2px solid var(--Soft_Blue);
   border-radius: 7px;
   background: var(--Soft_Blue);
-  padding: 10px 20px;
+  padding: 12px 20px;
   text-transform: uppercase;
   color: #fff;
   transition: all ease 1s;
@@ -87,7 +87,7 @@
   border: 2px solid var(--Grayish_Blue);
   border-radius: 7px;
   background: var(--Grayish_Blue);
-  padding: 10px 20px;
+  padding: 12px 20px;
   text-transform: uppercase;
   color: var(--Very_Dark_Blue);
   transition: all ease 1s;
@@ -98,7 +98,21 @@
   background: none;
   color: var(--Grayish_Blue);
 }
-.welcome .welocme__img {
+.welcome .welcome__box-img {
+  position: relative;
+}
+.welcome .welcome__box-img:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -40%;
+  z-index: -1;
+  width: 100%;
+  height: 80%;
+  background: var(--Soft_Blue);
+  border-radius: 300px 0 0 300px;
+}
+.welcome .welcome__box-img .welocme__img {
   width: 100%;
 }
 @media screen and (max-width: 930px) {
@@ -107,9 +121,117 @@
   }
 }
 
+.features-intro {
+  text-align: center;
+  padding: 0 20%;
+}
+
+.features-intro__title {
+  font-size: var(--titles);
+  color: var(--Very_Dark_Blue);
+}
+
+.features-intro__text {
+  line-height: 35px;
+  color: var(--Grayish_Blue);
+  font-size: 18px;
+}
+
+.features-slider__box-items {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.features-slider__box-items .features-slider__text {
+  position: relative;
+  padding: 20px 40px;
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom: 2px solid var(--Grayish_Blue);
+}
+.features-slider__box-items .features-slider__text .features-slider__barra {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 3px;
+  background: red;
+  transition: all ease 1s;
+  display: none;
+}
+.features-slider__box-items .features-slider__text .features-slider__barra--active {
+  display: block;
+}
+.features-slider__box-items .features-slider__text:hover {
+  color: var(--Soft_Red);
+}
+
+.features-slider__option {
+  display: none;
+  grid-template-columns: var(--columns);
+  align-items: center;
+  margin-bottom: 50px;
+}
+.features-slider__option .features-slider__option-box-img {
+  position: relative;
+}
+.features-slider__option .features-slider__option-box-img:after {
+  content: "";
+  position: absolute;
+  bottom: -15%;
+  left: -40%;
+  z-index: -1;
+  width: 100%;
+  height: 70%;
+  background: var(--Soft_Blue);
+  border-radius: 0 200px 200px 0;
+}
+.features-slider__option .features-slider__option-box-img .features-slider__option-img {
+  width: 100%;
+  height: 100%;
+}
+.features-slider__option .features-slider__option-box-text {
+  padding: 150px 15px 50px 15px;
+}
+.features-slider__option .features-slider__option-box-text .features-slider__option-title {
+  margin: 0;
+  font-size: 40px;
+  color: var(--Very_Dark_Blue);
+}
+.features-slider__option .features-slider__option-box-text .features-slider__option-parrafo {
+  line-height: 35px;
+  color: var(--Grayish_Blue);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.features-slider__option .features-slider__option-btn {
+  border: 2px solid var(--Soft_Blue);
+  border-radius: 7px;
+  background: var(--Soft_Blue);
+  padding: 12px 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all ease 1s;
+  cursor: pointer;
+}
+.features-slider__option .features-slider__option-btn:hover {
+  background: none;
+  color: var(--Soft_Blue);
+}
+
+.features-slider__option--active {
+  display: grid;
+}
+
 body {
   font-size: 16px;
   font-family: "Rubik", sans-serif;
+}
+
+.container__fix {
+  overflow: hidden;
+  width: 100%;
 }
 
 .wrapper {
