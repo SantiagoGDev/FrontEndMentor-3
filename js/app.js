@@ -19,3 +19,23 @@ $items.addEventListener('click', e =>{
     });
 })
 
+function validEmail(){
+    const $inputEmail = document.getElementById('email'),
+          $iconEmail = document.getElementById('icon-email'),
+          $botonEmail = document.getElementById('btn-contact');
+
+    const expresion = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    
+    const validInput = ()=>{
+        if(expresion.test($inputEmail.value)){
+            $iconEmail.setAttribute('src','images/comprobar.svg');
+            $inputEmail.classList.remove('publicity__form-email--error');
+        }else{
+            $iconEmail.setAttribute('src','images/icon-error.svg');
+            $inputEmail.classList.add('publicity__form-email--error');
+        }
+    }
+    $inputEmail.addEventListener('keyup',validInput);
+}
+
+validEmail();

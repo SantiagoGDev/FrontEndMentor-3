@@ -19,6 +19,21 @@
   }
 }
 
+body {
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+.container__fix {
+  overflow: hidden;
+  width: 100%;
+}
+
+.wrapper {
+  width: 90%;
+  margin: auto;
+}
+
 .hero {
   display: flex;
   justify-content: space-between;
@@ -412,19 +427,79 @@
   color: var(--Soft_Blue);
 }
 
-body {
-  font-size: 16px;
-  font-family: "Rubik", sans-serif;
+.publicity {
+  background: var(--Soft_Blue);
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
-
-.container__fix {
-  overflow: hidden;
-  width: 100%;
+.publicity .publicity__text {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-
-.wrapper {
-  width: 90%;
-  margin: auto;
+.publicity .publicity__title {
+  margin-top: 0;
+  font-size: 30px;
+}
+.publicity .publicity__form {
+  display: flex;
+  align-items: center;
+}
+.publicity .publicity__form .publicity__form-element {
+  position: relative;
+}
+.publicity .publicity__form .publicity__form-element .publicity__form-email {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 30px 12px 12px;
+  border-radius: 5px;
+  border: 2px solid #1fff78;
+  outline: none;
+  color: var(--Grayish_Blue);
+}
+.publicity .publicity__form .publicity__form-element .publicity__form-email--error {
+  border-color: var(--Soft_Red);
+}
+.publicity .publicity__form .publicity__form-element .publicity__form-icon {
+  position: absolute;
+  width: 20px;
+  bottom: 35%;
+  right: 10px;
+  display: block;
+}
+.publicity .publicity__form .publicity__form-btn {
+  outline: none;
+  border: 2px solid var(--Soft_Red);
+  border-radius: 7px;
+  background: var(--Soft_Red);
+  padding: 12px 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all ease 1s;
+  cursor: pointer;
+}
+.publicity .publicity__form .publicity__form-btn:hover {
+  background: none;
+  color: var(--Soft_Red);
+}
+.publicity .publicity__form .publicity__form-btn:hover {
+  background: #fff;
+}
+@media screen and (max-width: 500px) {
+  .publicity .publicity__form .publicity__form-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .publicity .publicity__form {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
