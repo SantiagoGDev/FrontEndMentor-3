@@ -27,6 +27,7 @@ function validEmail(){
     const expresion = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
     
     const validInput = ()=>{
+        
         if(expresion.test($inputEmail.value)){
             $iconEmail.setAttribute('src','images/comprobar.svg');
             $inputEmail.classList.remove('publicity__form-email--error');
@@ -39,3 +40,23 @@ function validEmail(){
 }
 
 validEmail();
+
+
+let aux = true;
+function showMenu(){
+    const menu = document.querySelector('.main-menu');
+    const logo = document.querySelector('.hero__logo');
+    if(aux){
+        menu.classList.add('main-menu--open');
+        boton.setAttribute('src','images/icon-close.svg');
+        logo.setAttribute('src','images/logo-bookmarkf.svg');
+        aux = false;
+    }else{
+        menu.classList.remove('main-menu--open');
+        boton.setAttribute('src','images/icon-hamburger.svg');
+        logo.setAttribute('src','images/logo-bookmark.svg');
+        aux = true;
+    }
+}
+const boton = document.querySelector('.menu-bar__icon');
+boton.addEventListener('click',showMenu);
